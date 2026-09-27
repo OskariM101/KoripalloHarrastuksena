@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koripallo Harrastuksena</title>
+  <meta name="description" content="Korikentällä esittelee oman koripalloharrastukseni: kohokohdat, harjoittelutyypit, suosikkiharjoitukset, usein kysytyt kysymykset ja pelipaikkavertailu.">
+
+  <!--Google Fonts: Oswald otsikoihin, Work Sans leipätekstiin-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!--Bootstrap 5 CSS (CDN)-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--tyylitiedosto-->
+  <link href="style_koris.css" rel="stylesheet">
+</head>
+<body>
+
+  <!--nav ohitus (tekoälyn lisäys saavutettavuuteen)-->
+  <a class="visually-hidden-focusable skip-link" href="#paasisalto">siirry pääsisältöön</a>
+
+  <!--nav-->
+  <!--navbar-expand-lg: mukautettu (tekoälyn lisäys saavutettavuuteen)-->
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#etusivu">🏀 Koripallo Harrastuksena</a>
+
+        <!--hampurilaisvalikon painike-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#paavalikko">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="paavalikko">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#etusivu">Etusivu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kohokohdat">Miten aloittaa?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#harjoittelu">Harjoittelutyypit</a></li>
+            <li class="nav-item"><a class="nav-link" href="#harjoitukset">Perusteharjoitukset</a></li>
+            <li class="nav-item"><a class="nav-link" href="#ukk">UKK</a></li>
+            <li class="nav-item"><a class="nav-link" href="#vertailu">Vertailu</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="paasisalto">
+
+    <!--Hero-->
+
+    <section id="etusivu" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h1 class="display-4">Minun harrastukseni: Koripallo</h1>
+            <p class="lead">
+              Tällä sivulla kerron koripallosta ja miten sen pelaamisen kannattaa aloittaa.
+            </p>
+            <a href="#harjoitukset" class="btn btn-accent btn-lg">Katso harjoitukseni</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="koripallo.jpg" class="img-fluid rounded hero-img" alt="Koripallo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--kuvakaruselli: miten aloittaa?-->
+
+    <section id="kuvakaruselli" class="section-padding">
+      <div class="container">
+        <h2 class="section-title">Miten aloittaa koripallon harrastaminen?</h2>
+        <p class="section-intro">Koripallo on siitä hyvä laji, ettei se vaadi paljon varusteita tai rahaa aloittamiseen Tässä pieni tietopaketti.</p>
+
+        <div id="kuvakaruselli" class="carousel slide rounded overflow-hidden" data-bs-ride="carousel">
+
+          <!--kuvakarusellin osoittimet-->
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#kuvakaruselli" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#kuvakaruselli" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#kuvakaruselli" data-bs-slide-to="2"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="koripallo ja kengät.jpg" class="d-block w-100" style="width: 300px; height: 600px;" alt="Välineet">
+              <div class="carousel-caption">
+                <h3>Välineet</h3>
+                <p>Koripallo: Valitse joko sisä- tai ulkopallo. En suosittele käyttämään yhtä palloa molempiin.
+                  Kengät: Osta koripalloon tarkoitetut kengät. Koripallo kengät ovat rakennettu juurikin koripallon pelaamista varten. Vältyt vammoilta valitsemalla sopivat kengät (Tarkista että kengät ovat sisäpeleihin tarkoitetut).
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="court.jpg" class="d-block w-100" style="width: 300px; height: 600px;" alt="Kenttä kuva">
+              <div class="carousel-caption">
+                <h3>Säännöt</h3>
+                <p>Opettele mitä tarkoittavat: Double dribble, Carry, Travel, Defensive & Offensive Fouls. Nämä ymmärtämällä voit osallistua jo rentoihin peleihin.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="syöttely.jpg" class="d-block w-100" style="width: 300px; height: 600px;" alt="Jokic">
+              <div class="carousel-caption">
+                <h3>Pallonhallinta</h3>
+                <p>Päivänselvää on osata kuljettaa, heittää ja syöttää sekä ymmärtää puolustamista. Suosittelen kuitenkin harjoittelemaan etenkin syöttelyä, sillä hyvällä syöttelyllä autat tiimiäsi voittamaan vaikka et olisi vielä heidän tasollaan muissa taidoissa.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#kuvakaruselli" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Edellinen</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#kuvakaruselli" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Seuraava</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--ruudukko: harjoittelutyypit-->
+    <!--Bootstrapin grid-järjestelmä-->
+
+    <section id="harjoittelu" class="section-padding section-alt">
+      <div class="container">
+        <h2 class="section-title">Harjoittelutyypit</h2>
+        <p class="section-intro">Tästä voit napata suosittelemiani harjoituksia.</p>
+
+        <div class="row row-cols-2 row-cols-md-4 g-3">
+          <div class="col">
+            <div class="grid-tile">
+              <img src="shooting.jpg" alt="Heittoharjoittelun kuvituskuva">
+              <span class="grid-tile-label">Heittoharjoittelu</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="grid-tile">
+              <img src="Kevin-Garnett-defends-1-scaled.jpg" alt="Puolustuspelin kuvituskuva">
+              <span class="grid-tile-label">Puolustus</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="grid-tile">
+              <img src="2544.jpg" alt="Kuntoharjoittelun kuvituskuva">
+              <span class="grid-tile-label">Kunto</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="grid-tile">
+              <img src="CP.jpg" alt="Pelikäsityksen kuvituskuva">
+              <span class="grid-tile-label">Pelikäsitys</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--kortit: perusteharjoitukset-->
+
+    <section id="harjoitukset" class="section-padding">
+      <div class="container">
+        <h2 class="section-title">Perusteharjoitukset</h2>
+        <p class="section-intro">Yleiset harjoitukset jota jokainen pelaaja kaikilla tasoilla harjoittelee.</p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+          <div class="col">
+            <div class="card drill-card h-100">
+              <img src="sga.jpg" class="card-img-top" alt="FT merchant" style="width: 100%; height: 275px; object-fit: cover;">
+              <div class="card-body">
+                <span class="badge badge-heitto mb-2">Heittoharjoittelu</span>
+                <h3 class="card-title h5">Vapaaheitot ja 3p</h3>
+                <p class="card-text">Aseta tavoitemäärä (>50 heittoa). Tavoitteena tasainen heittorytmi.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Kesto:</strong> n. 60 min</li>
+                <li class="list-group-item"><strong>Tavoite:</strong> +50 % osumatarkkuus</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card drill-card h-100">
+              <img src="Pick & Roll Shooting Drill.jpg" class="card-img-top" alt="Pick-and-roll">
+              <div class="card-body">
+                <span class="badge badge-pelikasitys mb-2">Pelikäsitys</span>
+                <h3 class="card-title h5">Pick-and-roll</h3>
+                <p class="card-text">Kaksinpeli, jossa harjoitellaan ajoitusta ja päätöksentekoa syötön ja heiton välillä.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Kesto:</strong> n. 30 min</li>
+                <li class="list-group-item"><strong>Tavoite:</strong> Nopea päätöksenteko ja sulava syöttely.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card drill-card h-100">
+              <img src="skater-1657646762.jpg" class="card-img-top" alt="plyos">
+              <div class="card-body">
+                <span class="badge badge-kunto mb-2">Kunto</span>
+                <h3 class="card-title h5">Plyometrics</h3>
+                <p class="card-text">Perus lihaskunnon lisäksi treenin alussa tehtäviä atleettista räjähtävyyttä lisääviä liikkeitä.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Kesto:</strong> n. 20 min</li>
+                <li class="list-group-item"><strong>Tavoite:</strong> Räjähtävä nopeus</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--haitari: UKK-->
+
+    <section id="ukk" class="section-padding section-alt">
+      <div class="container">
+        <h2 class="section-title">Usein kysytyt kysymykset</h2>
+
+        <div class="accordion" id="ukkHaitari">
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="kysymys1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#vastaus1">
+                Miten aloitin koripallon pelaamisen?
+              </button>
+            </h3>
+            <div id="vastaus1" class="accordion-collapse collapse show" data-bs-parent="#ukkHaitari">
+              <div class="accordion-body">
+                Aloitin pelaamaan kavereiden kanssa jonka jälkeen olen laajentanut piiriäni missä pelaan. Koripallo on helppo aloittaa koska sitä voi harjoitella yksin ja ulkokenttiä löytyy jokapuolelta. Mielestäni koripalloyhteisö on avoin uusia pelaajia vastaan ja uusiin ihmisiin on helppo tutustua.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="kysymys2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vastaus2">
+                Kuinka usein harjoittelen?
+              </button>
+            </h3>
+            <div id="vastaus2" class="accordion-collapse collapse" data-bs-parent="#ukkHaitari">
+              <div class="accordion-body">
+                Salitreeniä koripalloa varten treenaan 2x viikossa. Pallonhallinta ja heittoharjoituksia tavoittelen tekemään myös 2x viikossa. Pelit tapahtuvat yleensä viikonloppuisin.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="kysymys3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vastaus3">
+                Mikä on suosikki pelityylini?
+              </button>
+            </h3>
+            <div id="vastaus3" class="accordion-collapse collapse" data-bs-parent="#ukkHaitari">
+              <div class="accordion-body">
+                Pidän eniten pick-and-roll-tilanteista, koska ne vaativat hyvää yhteispeliä ja nopeaa päätöksentekoa. Yksilöllinen pelityylini nojautuu vahvasta Kevin Durantin pelityyliin. Tykkään myös puolustaa, koska olen siinä tosi hyvä.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- taulukko pelipaikoista -->
+
+    <section id="vertailu" class="section-padding">
+      <div class="container">
+        <h2 class="section-title">Pelipaikkojen vertailu</h2>
+        <p class="section-intro">Yleiskatsaus koripallon pelipaikkoihin ja niiden painotuksiin.</p>
+
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <caption>Koripallon pelipaikat vertailtuna roolin, pituuden ja avaintaidon mukaan.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Pelipaikka</th>
+                <th scope="col">Rooli</th>
+                <th scope="col">Tyypillinen pituus</th>
+                <th scope="col">Avaintaito</th>
+                <th scope="col">Vaikeustaso oppia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Pelintekijä (Point Guard, PG)</th>
+                <td>Pelin ohjaaja</td>
+                <td>175-190 cm</td>
+                <td>Pallonkäsittely</td>
+                <td><span class="badge badge-keski">Keskitaso</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Heittäjä (Shooting Guard, SG)</th>
+                <td>Pistentekijä</td>
+                <td>185-198 cm</td>
+                <td>Heittotarkkuus</td>
+                <td><span class="badge badge-helppo">Helppo</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Pieni Laitahyökkääjä (Small Forward, SF)</th>
+                <td>Monipuolinen hyökkääjä</td>
+                <td>195-205 cm</td>
+                <td>Nopeus</td>
+                <td><span class="badge badge-keski">Keskitaso</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Iso Laitahyökkääjä (Power Forward, PF)</th>
+                <td>Levypallotaistelija</td>
+                <td>200-208 cm</td>
+                <td>Fyysisyys</td>
+                <td><span class="badge badge-keski">Keskitaso</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Keskustapelaaja (Center, C)</th>
+                <td>Maalinsuojaaja</td>
+                <td>205-215 cm</td>
+                <td>Blokkaus</td>
+                <td><span class="badge badge-vaikea">Vaikea</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--footer-->  
+
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p class="mb-1">🏀 Koripallo Harrastuksena. Tehty Bootstrapilla.</p>
+      <p class="mb-0 small">Kuvat: Google.</p>
+    </div>
+  </footer>
+
+  <!--boostrap ominaisuuksia varten-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

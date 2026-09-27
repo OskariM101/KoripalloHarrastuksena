@@ -1,0 +1,196 @@
+/* Koripallo Harrastuksena – oma tyylitiedosto. */
+
+:root {
+  --color-navy: #16233B;
+  --color-navy-light: #23345A;
+  --color-court: #C68A45;
+  --color-orange: #E8592E;
+  --color-bg: #EDEEF0;
+  --color-card-bg: #FFFFFF;
+  --color-ink: #14140F;
+
+  --font-display: "Oswald", "Segoe UI", sans-serif;
+  --font-body: "Work Sans", "Segoe UI", sans-serif;
+}
+
+/* perusasetukset */
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+}
+
+h1, h2, h3, h4, .navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* näppäimistökäyttäjän "ohita navigaatio" -linkki (tekoälyn lisäys) */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  background: var(--color-orange);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  z-index: 2000;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* nav */
+.navbar {
+  background-color: var(--color-navy);
+}
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #fff;
+}
+.navbar-brand {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+/* Hero */
+.hero {
+  background-color: var(--color-navy);
+  color: #fff;
+  padding: 5rem 0;
+}
+.hero .lead {
+  color: rgba(255, 255, 255, 0.85);
+}
+.hero-img {
+  border: 4px solid var(--color-orange);
+}
+
+/* oma tehostepainike */
+.btn-accent {
+  background-color: var(--color-orange);
+  border-color: var(--color-orange);
+  color: #fff;
+  font-weight: 500;
+}
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: #c8481f;
+  border-color: #c8481f;
+  color: #fff;
+}
+
+/* yleiset */
+.section-padding {
+  padding: 4rem 0;
+}
+.section-alt {
+  background-color: #E2E3DD;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+.section-intro {
+  color: #55584c;
+  margin-bottom: 2rem;
+}
+
+/* kuvakaruselli */
+.carousel-caption h3 {
+  color: #fff;
+}
+.carousel-caption {
+  background: rgba(22, 35, 59, 0.6);
+  border-radius: 0.5rem;
+}
+
+/* ruudukko */
+.grid-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  aspect-ratio: 1 / 1;
+}
+.grid-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.grid-tile:hover img {
+  transform: scale(1.05);
+}
+.grid-tile-label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  background: linear-gradient(0deg, rgba(22,35,59,0.85), transparent);
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* kortit */
+.drill-card {
+  border: 1px solid #d7d8d0;
+  border-top: 4px solid var(--color-court);
+  border-radius: 0.25rem;
+}
+
+/* badget (lisä-Bootstrap-ominaisuus) */
+.badge-heitto       { background-color: var(--color-orange); }
+.badge-pelikasitys  { background-color: var(--color-navy-light); }
+.badge-kunto        { background-color: var(--color-court); color: #14140F; }
+.badge-helppo       { background-color: #4C7A4C; }
+.badge-keski        { background-color: var(--color-court); color: #14140F; }
+.badge-vaikea       { background-color: #A23B2E; }
+
+/* haitari */
+.accordion-button:not(.collapsed) {
+  background-color: #E2E3DD;
+  color: var(--color-ink);
+}
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(22, 35, 59, 0.35);
+}
+
+/* taulukko */
+caption {
+  caption-side: top;
+  color: #55584c;
+}
+.table thead th {
+  background-color: var(--color-navy);
+  color: #fff;
+}
+
+/* footer */
+.site-footer {
+  background-color: var(--color-navy);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+/* saavutettavuus (tekoälyn lisäys) */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-orange);
+  outline-offset: 2px;
+}
+
+/* tekoälyn lisäys "vähennä liikettä" */
+@media (prefers-reduced-motion: reduce) {
+  .grid-tile img {
+    transition: none;
+  }
+}
