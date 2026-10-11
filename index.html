@@ -219,6 +219,55 @@
       </div>
     </section>
 
+    <div class="container my-5">
+    <h2 class="mb-4 text-center">Koripalloilijan vinkit</h2>
+    
+    <!--Tähän containeriin latautuvat kortit-->
+    <div id="json-vinkit-container" class="row g-4">
+        <div class="text-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Ladataan...</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function haeOmaJsonData() {
+        const container = document.getElementById('json-vinkit-container');
+        
+        try {
+            // Haetaan tiedosto
+            const response = await fetch('vinkit.json');
+            const vinkit = await response.json();
+            
+            container.innerHTML = ''; // Tyhjennetään latausanimaatio
+            
+            vinkit.forEach(vinkki => {
+                const cardHTML = `
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-success">
+                            <div class="card-body">
+                                <span class="badge bg-success mb-2">${vinkki.kategoria}</span>
+                                <h5 class="card-title">${vinkki.otsikko}</h5>
+                                <p class="card-text">${vinkki.kuvaus}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += cardHTML;
+            });
+            
+        } catch (error) {
+            console.error('Virhe tiedoston haussa:', error);
+            container.innerHTML = '<p class="text-center text-danger">Tietojen lataaminen epäonnistui.</p>';
+        }
+    }
+
+    // Suoritetaan funktio, kun sivu latautuu
+    haeOmaJsonData();
+</script>
+    
     <!--haitari: UKK-->
 
     <section id="ukk" class="section-padding section-alt">
